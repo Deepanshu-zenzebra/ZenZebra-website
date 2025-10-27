@@ -4,14 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 const LOCATIONS = [
-  { label: "Smartworks - Gurugram", file: "zenzebra-smartworks.pdf" },
-  { label: "Awfis - Ambience Mall, Gurugram", file: "zenzebra-awfis.pdf" },
-  { label: "The Lodhi - New delhi", file: "zenzebra-lodhi.pdf" },
+  { label: "Smartworks - Gurugram", file: "/Smartworks.pdf" },
+  { label: "Awfis - Ambience Mall, Gurugram", file: "/Awfis.pdf" },
+  { label: "The Lodhi - New delhi", file: "/Lodhi.pdf" },
 ];
 
 export default function CataloguePage() {
   const [selected, setSelected] = useState("");
-  const url = selected ? "/catalogs/" + selected : "";
+  const url = selected ? selected : "";
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-20">
