@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-
+import Link from "next/link";
+import { useState } from "react";
 
 const LOCATIONS = [
-  { label: 'Smartworks - Gurugram', file: 'zenzebra-smartworks.pdf' },
-  { label: 'Awfis - Ambience Mall, Gurugram', file: 'zenzebra-awfis.pdf' },
-  { label: 'The Lodhi - New delhi', file: 'zenzebra-lodhi.pdf' },
-]
+  { label: "Smartworks - Gurugram", file: "zenzebra-smartworks.pdf" },
+  { label: "Awfis - Ambience Mall, Gurugram", file: "zenzebra-awfis.pdf" },
+  { label: "The Lodhi - New delhi", file: "zenzebra-lodhi.pdf" },
+];
 
 export default function CataloguePage() {
-  const [selected, setSelected] = useState('')
-  const url = selected ? '/catalogs/' + selected : ''
+  const [selected, setSelected] = useState("");
+  const url = selected ? "/catalogs/" + selected : "";
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-20">
@@ -21,7 +21,8 @@ export default function CataloguePage() {
           Explore Our <span className="text-[#CC2224]">Catalogue</span>
         </h1>
         <p className="text-white/70 text-lg leading-relaxed">
-          Choose your ZenZebra location below to browse the latest handpicked products and experiences curated for that space.
+          Choose your ZenZebra location below to browse the latest handpicked
+          products and experiences curated for that space.
         </p>
       </div>
 
@@ -43,7 +44,7 @@ export default function CataloguePage() {
 
         <button
           disabled={!url}
-          onClick={() => url && window.open(url, '_blank', 'noopener')}
+          onClick={() => url && window.open(url, "_blank", "noopener")}
           className="rounded-lg bg-[#CC2224] disabled:bg-[#CC2224]/40 px-8 py-3 text-lg font-semibold tracking-wide
                      hover:scale-105 transition-transform duration-300 ease-out"
         >
@@ -66,6 +67,13 @@ export default function CataloguePage() {
           </div>
         )}
       </div>
+      {/* <div>
+        <Link href={"/admin-login"}>
+          <button className="px-10 py-5 mt-10 bg-white/10 rounded-2xl font-bold hover:bg-[#CC2224]/50 transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+            Admin Login
+          </button>
+        </Link>
+      </div> */}
     </main>
-  )
+  );
 }
