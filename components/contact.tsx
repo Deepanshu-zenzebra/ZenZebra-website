@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 
+
 export default function ContactPage() {
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
