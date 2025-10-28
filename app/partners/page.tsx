@@ -1,4 +1,4 @@
-import { CollabModel, ExperienceSection, FinalCTA, Hero, Numbers, ValueSection } from "@/components/partnersPage";
+import PartnersTicker, { CollabModel, ExperienceSection, FinalCTA, Hero, Numbers, ValueSection } from "@/components/partnersPage";
 
 export const metadata = {
   title: "Partners | ZenZebra",
@@ -42,10 +42,11 @@ export default function PartnersPage() {
         className=' sm:block absolute top-0 left-0 w-full h-full object-cover opacity-60 pointer-events-none select-none"'
       ></img>
       <div className="relative z-10">
-        <Hero />
+      <Hero />
       <ValueSection />
       <ExperienceSection />
       <Numbers />
+      <PartnersTicker/>
       <CollabModel />
       <FinalCTA />
       </div>

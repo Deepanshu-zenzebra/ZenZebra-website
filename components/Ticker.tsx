@@ -38,6 +38,7 @@ function Ticker() {
         {src:'/27.png', alt: "Brand logo"},
         {src:'/28.png', alt: "Brand logo"},
     ]
+
   return (
     <div  className="container mx-auto">
         <TickerItem images={UpperTicker} from='0%' to="-100%"/>

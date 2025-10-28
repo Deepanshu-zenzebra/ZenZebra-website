@@ -16,7 +16,7 @@ export default function How() {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl font-extrabold leading-tight"
           >
-            Discovery <br/><span className="text-black">To</span> Destination
+            From <span className="text-black">Discovery</span> To <span className="text-black">Destination</span>
           </motion.h2>
 
           <motion.p
@@ -26,8 +26,8 @@ export default function How() {
             viewport={{ once: true }}
             className="mt-4 text-white/90 max-w-prose"
           >
-            From discovery to decision - in spaces you already are.<br/>
-            No pressure. No guesswork.
+            In spaces you already are.<br/>
+
           </motion.p>
         </div>
 

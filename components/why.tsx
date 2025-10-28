@@ -110,12 +110,12 @@ const items = [
   {
     k: "02",
     title: "Assurance",
-    line: "Try first. Own later.",
+    line: "Try first. Own later. No regrets",
   },
   {
     k: "03",
     title: "Value",
-    line: "Premium vibe. Honest prices.",
+    line: "Lux experience. Honest prices.",
   },
 ];
 
@@ -166,11 +166,11 @@ function Stripe({
     >
       {/* base */}
       <div
-        className="relative flex items-center justify-between gap-6 rounded-2xl px-6 py-6
-                      bg-white/[0.04] backdrop-blur-xl ring-1 ring-white/10"
+        className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-6 
+             rounded-2xl px-6 py-6 bg-white/[0.04] backdrop-blur-xl ring-1 ring-white/10"
       >
         {/* left: key + title */}
-        <div className="flex items-baseline gap-4">
+        <div className="flex items-baseline gap-4 ">
           <span className="text-xs tracking-widest text-white/40">{k}</span>
           <h3 className="text-2xl sm:text-3xl font-semibold text-white">
             {title}

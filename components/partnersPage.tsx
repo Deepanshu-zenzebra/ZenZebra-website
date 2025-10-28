@@ -1,7 +1,8 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import TickerItem from "./TickerItem";
 
 /* -------------------- Hero -------------------- */
 export function Hero() {
@@ -16,7 +17,8 @@ export function Hero() {
           viewport={{ once: true }}
           className="text-4xl sm:text-6xl font-extrabold tracking-tight"
         >
-          Transform Your <span className="text-[#CC2224]">Space</span> Into an Experience
+          Let’s Build <span className="text-[#CC2224]">BreakSpots</span>{" "}
+          Together
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -25,8 +27,8 @@ export function Hero() {
           viewport={{ once: true }}
           className="mt-4 max-w-2xl text-white/75"
         >
-          ZenZebra builds micro-worlds of pause inside coworking spaces, hotels, and cafés -
-          creating a cultural anchor that elevates your ecosystem.
+          ZenZebra builds micro-worlds of pause inside coworking spaces, hotels,
+          and cafés - creating a cultural anchor that elevates your ecosystem.
         </motion.p>
 
         <motion.div
@@ -45,25 +47,25 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
 
 /* -------------------- Value Proposition -------------------- */
 export function ValueSection() {
   const values = [
     {
-      title: 'Cultural Anchor',
-      text: 'ZenZebra adds life and connection to your space - turning it into a lifestyle destination.',
+      title: "Cultural Anchor",
+      text: "ZenZebra adds life and connection to your space - turning it into a lifestyle destination.",
     },
     {
-      title: 'Extended Dwell Time',
-      text: 'Our BreakSpots make people stay longer, engage deeper, and return often.',
+      title: "Extended Dwell Time",
+      text: "Our BreakSpots make people stay longer, engage deeper, and return often.",
     },
     {
-      title: 'Revenue & Retention',
-      text: 'Add experiential retail without operational load. We handle curation, logistics, and branding.',
+      title: "Revenue & Retention",
+      text: "Add experiential retail without operational load. We handle curation, logistics, and branding.",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 px-6">
@@ -77,7 +79,8 @@ export function ValueSection() {
           The <span className="text-[#CC2224]">BreakSpot</span> Advantage
         </motion.h2>
         <p className="mt-3 text-white/70">
-          Every ZenZebra installation transforms your environment into an emotional reset point.
+          Every ZenZebra installation transforms your environment into an
+          emotional reset point.
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -91,31 +94,33 @@ export function ValueSection() {
               className="rounded-2xl bg-white/[0.04] backdrop-blur-xl ring-1 ring-white/10 p-6 hover:ring-[#CC2224]/30 transition"
             >
               <h3 className="text-xl font-semibold">{v.title}</h3>
-              <p className="mt-3 text-sm text-white/70 leading-relaxed">{v.text}</p>
+              <p className="mt-3 text-sm text-white/70 leading-relaxed">
+                {v.text}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 /* -------------------- Experience Section -------------------- */
 export function ExperienceSection() {
   const layers = [
     {
-      step: '1. Entry - The Dazzle Moment',
-      desc: 'Color, scent, and curiosity invite people to pause. It’s not a shop - it’s a vibe.',
+      step: "1. Entry - The Dazzle Moment",
+      desc: "Color, scent, and curiosity invite people to pause. It’s not a shop - it’s a vibe.",
     },
     {
-      step: '2. Exploration - The Touch Loop',
-      desc: 'Every product begs to be felt, tested, and talked about - real engagement, not clicks.',
+      step: "2. Exploration - The Touch Loop",
+      desc: "Every product begs to be felt, tested, and talked about - real engagement, not clicks.",
     },
     {
-      step: '3. Belonging - The Shared Find',
-      desc: 'Each interaction sparks conversation - the kind of marketing no ad can buy.',
+      step: "3. Belonging - The Shared Find",
+      desc: "Each interaction sparks conversation - the kind of marketing no ad can buy.",
     },
-  ]
+  ];
 
   return (
     <section className="relative overflow-hidden py-20 px-6">
@@ -127,10 +132,11 @@ export function ExperienceSection() {
           viewport={{ once: true }}
           className="text-3xl sm:text-5xl font-extrabold tracking-tight"
         >
-          The <span className="text-[#CC2224]">BreakSpot</span> Experience
+          One of a <span className="text-[#CC2224]">kind</span> Experience
         </motion.h2>
         <p className="mt-3 text-white/70">
-          Designed for movement, but made for pause. Each layer adds value to your ecosystem.
+          Designed for movement, but made for pause. Each layer adds value to
+          your ecosystem.
         </p>
 
         <div className="mt-10 space-y-6">
@@ -151,17 +157,17 @@ export function ExperienceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 /* -------------------- Numbers -------------------- */
 export function Numbers() {
   const stats = [
-    { num: '3+', label: 'Cities Active' },
-    { num: '250+', label: 'Brands Integrated' },
-    { num: '10K+', label: 'Daily Footfall' },
-    { num: '∞', label: 'Connections Sparked' },
-  ]
+    { num: "3+", label: "Cities Active" },
+    { num: "250+", label: "Trending Brands" },
+    { num: "15K+", label: "Daily Footfall" },
+    { num: "∞", label: "Connections Sparked" },
+  ];
 
   return (
     <section className="py-20 px-6 border-t border-white/10">
@@ -180,6 +186,53 @@ export function Numbers() {
         ))}
       </div>
     </section>
+  );
+}
+
+/* -------------------- Existing Partners -------------------- */
+
+
+export default function PartnersTicker() {
+  const logos = [
+    { src: '/dlf.webp', alt: 'DLF' },
+    { src: '/smartworks.png', alt: 'Smartworks' },
+    { src: '/awfis.png', alt: 'Awfis' },
+    { src: '/lodhi.png', alt: 'The Lodhi' },
+    { src: '/oneplus.png', alt: 'Oneplus' },
+    { src: '/cleartrip.jpg', alt: 'Clear Trip' },
+  ]
+  const track = [...logos, ...logos] // exact duplicate
+
+  return (
+    <section className="py-10">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 z-10"
+               style={{ maskImage: 'linear-gradient(to right, black, transparent)' }} />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 z-10"
+               style={{ maskImage: 'linear-gradient(to left, black, transparent)' }} />
+
+          <motion.div
+            className="flex w-[200%]" // 2x width -> -50% finishes 1 perfect cycle
+            initial={{ x: 0 }}
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 26, ease: 'linear', repeat: Infinity, repeatType: 'loop' }}
+            style={{ willChange: 'transform', transform: 'translate3d(0,0,0)' }}
+          >
+            {track.map((l, i) => (
+              <div key={i} className="flex items-center">
+                {/* fixed pixel width -> no sub-pixel rounding */}
+                <div className="shrink-0 w-[176px] h-[44px] opacity-80 hover:opacity-100 transition-opacity">
+                  <img src={l.src} alt={l.alt} className="block h-full w-full object-contain" draggable={false} />
+                </div>
+                {/* spacer instead of CSS gap (also fixed px) */}
+                <div className="shrink-0 w-[28px]" />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -187,18 +240,18 @@ export function Numbers() {
 export function CollabModel() {
   const models = [
     {
-      title: 'Space Partnership',
-      text: 'Integrate ZenZebra as an emotional hub in your property - we handle setup, curation, and operations.',
+      title: "Space Partnership",
+      text: "Integrate ZenZebra as an emotional hub in your property - we handle setup, curation, and operations.",
     },
     {
-      title: 'Event Collaboration',
-      text: 'Pop-ups, creator sessions, Break Fridays - every activation drives energy and dwell time.',
+      title: "Event Collaboration",
+      text: "Pop-ups, creator sessions, Break Fridays - every activation drives energy and dwell time.",
     },
     {
-      title: 'Brand x Space Collabs',
-      text: 'We match your vibe with trending brands for co-branded discovery moments.',
+      title: "Brand x Space Collabs",
+      text: "We match your vibe with trending brands for co-branded discovery moments.",
     },
-  ]
+  ];
   return (
     <section className="py-20 px-6">
       <div className="mx-auto max-w-6xl">
@@ -225,13 +278,15 @@ export function CollabModel() {
               className="rounded-2xl bg-white/[0.04] backdrop-blur-xl ring-1 ring-white/10 p-6"
             >
               <h3 className="text-xl font-semibold">{m.title}</h3>
-              <p className="mt-3 text-sm text-white/70 leading-relaxed">{m.text}</p>
+              <p className="mt-3 text-sm text-white/70 leading-relaxed">
+                {m.text}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 /* -------------------- Final CTA -------------------- */
@@ -246,11 +301,13 @@ export function FinalCTA() {
           viewport={{ once: true }}
           className="text-3xl sm:text-5xl font-extrabold tracking-tight"
         >
-          Let’s Build <span className="text-[#CC2224]">BreakSpots</span> Together
+          Transform Your <span className="text-[#CC2224]">Space</span> Into an
+          Experience
         </motion.h3>
         <p className="mt-3 max-w-2xl mx-auto text-white/75">
-          Add emotional value, drive engagement, and make your space unforgettable.  
-          Partner with ZenZebra to turn everyday movement into memorable moments.
+          Add emotional value, drive engagement, and make your space
+          unforgettable. Partner with ZenZebra to turn everyday movement into
+          memorable moments.
         </p>
 
         <div className="mt-8">
@@ -263,5 +320,5 @@ export function FinalCTA() {
         </div>
       </div>
     </section>
-  )
+  );
 }
