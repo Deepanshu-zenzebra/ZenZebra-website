@@ -33,7 +33,6 @@ export default function AdminLogin() {
 }
 
     }
-  };
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-[#0A0A0A] relative overflow-hidden">
