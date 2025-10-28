@@ -14,7 +14,7 @@ export function Hero() {
       <div className="mx-auto max-w-6xl">
         <motion.h1
           initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-4xl sm:text-6xl font-extrabold tracking-tight"
         >
@@ -23,7 +23,7 @@ export function Hero() {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
           className="mt-4 max-w-2xl text-white/75"
@@ -35,7 +35,7 @@ export function Hero() {
 
         <motion.div
           initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
           viewport={{ once: true }}
           className="mt-8 flex items-center gap-3"
@@ -74,7 +74,7 @@ export function WhyJoin() {
       <div className="mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-3xl sm:text-5xl font-extrabold tracking-tight"
         >
@@ -90,7 +90,7 @@ export function WhyJoin() {
             <motion.div
               key={it.title}
               initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.06 }}
               viewport={{ once: true }}
               className="rounded-2xl bg-white/[0.04] backdrop-blur-xl ring-1 ring-white/10 p-6"

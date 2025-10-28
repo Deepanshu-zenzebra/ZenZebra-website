@@ -63,7 +63,7 @@ export default function Home() {
       <Ticker/>
       <Locations/>
       <div className="flex justify-center">
-        <img src={'/asset-4.png'} className="absolute w-150 translate-y-[-20%] ml-10 opacity-30" alt="blob image 2"></img>
+        <img src={'/asset-4.png'} className="hidden sm:block absolute w-150 translate-y-[-20%] ml-10 opacity-30" alt="blob image 2"></img>
       </div>
       <OurPromise/>
     </div>
