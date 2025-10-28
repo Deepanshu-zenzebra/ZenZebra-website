@@ -28,7 +28,7 @@ export default function ContactPage() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-4 text-white/70 text-center max-w-2xl text-lg leading-relaxed"
         >
-          Whether you're a brand, a partner, or just curious - we’d love to hear from you.
+          Whether you&apos;re a brand, a partner, or just curious — we&apos;d love to hear from you.
         </motion.p>
 
         {/* Contact Cards */}
