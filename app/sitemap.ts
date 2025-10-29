@@ -1,9 +1,11 @@
+// app/sitemap.ts
 import type { MetadataRoute } from 'next';
 
-export default function robots(): MetadataRoute.Robots {
-  return {
-    rules: [{ userAgent: '*', allow: '/' }],
-    sitemap: 'https://zenzebra.in/sitemap.xml',
-    host: 'https://zenzebra.in',
-  };
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: 'https://zenzebra.in/', lastModified: new Date() },
+    { url: 'https://zenzebra.in/brands', lastModified: new Date() },
+    { url: 'https://zenzebra.in/partners', lastModified: new Date() },
+    { url: 'https://zenzebra.in/catalog' , lastModified: new Date() },
+  ];
 }
