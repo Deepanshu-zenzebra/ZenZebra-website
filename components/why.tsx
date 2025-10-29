@@ -119,6 +119,7 @@ const items = [
   },
 ];
 
+
 export default function Why() {
   return (
     <section className="relative overflow-hidden py-24">
@@ -134,6 +135,7 @@ export default function Why() {
         >
           Smarter choices made <span className="text-[#CC2224]">Effortless</span>
         </motion.h2>
+
         <div className="mt-10 space-y-4">
           {items.map((it, idx) => (
             <Stripe key={it.k} idx={idx} {...it} />
@@ -170,15 +172,25 @@ function Stripe({
              rounded-2xl px-6 py-6 bg-white/[0.04] backdrop-blur-xl ring-1 ring-white/10"
       >
         {/* left: key + title */}
-        <div className="flex items-baseline gap-4 ">
+        <div className="flex items-baseline gap-4">
           <span className="text-xs tracking-widest text-white/40">{k}</span>
           <h3 className="text-2xl sm:text-3xl font-semibold text-white">
             {title}
           </h3>
         </div>
 
+        {/* connector (visible only on desktop/tablet) */}
+        <div className="hidden sm:flex flex-1 relative items-center">
+          {/* red line */}
+          <span className="h-[2px] w-full bg-[#CC2224] rounded-full" />
+          {/* arrow head */}
+          <span
+            className="absolute right-0 w-3 h-3 border-t-2 border-r-2 border-[#CC2224] rotate-45 translate-x-[4px]"
+          />
+        </div>
+
         {/* right: one-line value */}
-        <p className="text-sm sm:text-base text-white/70">{line}</p>
+        <p className="text-sm sm:text-base text-white/70 font-bold">{line}</p>
 
         {/* red underline that grows on hover */}
         <span className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-[#CC2224]/70 transition-all duration-500 group-hover:w-full" />
