@@ -11,7 +11,7 @@ import Why from "@/components/why";
 export const metadata = {
   title: "ZenZebra - Curated Lifestyle Where You Already Are",
   description:
-    "ZenZebra brings curated lifestyle products directly into your daily spaces - offices, gyms, cafés, and malls. Try first, own after. No pressure, no guesswork, just better living by design.",
+    "ZenZebra brings curated lifestyle products directly into your daily spaces - offices, gyms, cafés. Try first, own after. No pressure, no guesswork, just better living by design.",
   keywords: [
     "ZenZebra",
     "lifestyle brand",
@@ -31,7 +31,7 @@ export const metadata = {
     siteName: "ZenZebra",
     images: [
       {
-        url: "/logo-2.png", 
+        url: "/logo-3.png", 
         width: 1200,
         height: 630,
         alt: "ZenZebra Lifestyle Experience",

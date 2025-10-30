@@ -21,7 +21,7 @@ export const metadata = {
     siteName: "ZenZebra",
     images: [
       {
-        url: "/logo-2.png",
+        url: "/logo-3.png",
         width: 1200,
         height: 630,
         alt: "ZenZebra Partners Page"

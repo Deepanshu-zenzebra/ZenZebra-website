@@ -17,7 +17,7 @@ export const metadata = {
       "Your favorite lifestyle picks, now where you live. ZenZebra is redefining the home experience — convenience, assurance, and value delivered.",
     url: "https://zenzebra.in/zen-at-home",
     siteName: "ZenZebra",
-    images: [{ url: "/logo-2.png", width: 1200, height: 630, alt: "ZenZebra Zen at Home" }],
+    images: [{ url: "/logo-3.png", width: 1200, height: 630, alt: "ZenZebra Zen at Home" }],
     locale: "en_IN",
     type: "website",
   },

@@ -17,7 +17,7 @@ export const metadata = {
       "Reach out to ZenZebra - convenience, assurance, and value-driven experiences. Connect with our team for brand or partnership opportunities.",
     url: "https://zenzebra.in/contact",
     siteName: "ZenZebra",
-    images: [{ url: "/logo-2.png", width: 1200, height: 630, alt: "ZenZebra Contact" }],
+    images: [{ url: "/logo-3.png", width: 1200, height: 630, alt: "ZenZebra Contact" }],
     locale: "en_IN",
     type: "website",
   },
