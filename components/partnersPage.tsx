@@ -6,6 +6,7 @@ import TickerItem from "./TickerItem";
 
 /* -------------------- Hero -------------------- */
 export function Hero() {
+  
   return (
     <section className="relative overflow-hidden py-28 px-6">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_50%_at_70%_0%,rgba(204,34,36,.15),transparent_60%)]" />
@@ -39,7 +40,9 @@ export function Hero() {
           className="mt-8 flex items-center gap-3"
         >
           <Link
-            href="/contact"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfyFOB1d7hBoF-um8epwCM6TR3tcB6diGmdffn3WNok4pMxZw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[#CC2224] px-6 py-3 text-sm font-semibold hover:bg-[#b31d1f] transition"
           >
             Partner With Us
@@ -190,8 +193,6 @@ export function Numbers() {
 }
 
 /* -------------------- Existing Partners -------------------- */
-
-
 export default function PartnersTicker() {
   const logos = [
     { src: '/dlf.webp', alt: 'DLF' },
@@ -221,11 +222,9 @@ export default function PartnersTicker() {
           >
             {track.map((l, i) => (
               <div key={i} className="flex items-center">
-                {/* fixed pixel width -> no sub-pixel rounding */}
                 <div className="shrink-0 w-[176px] h-[44px] opacity-80 hover:opacity-100 transition-opacity">
                   <img src={l.src} alt={l.alt} className="block h-full w-full object-contain" draggable={false} />
                 </div>
-                {/* spacer instead of CSS gap (also fixed px) */}
                 <div className="shrink-0 w-[28px]" />
               </div>
             ))}
@@ -312,7 +311,9 @@ export function FinalCTA() {
 
         <div className="mt-8">
           <Link
-            href="/contact"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfyFOB1d7hBoF-um8epwCM6TR3tcB6diGmdffn3WNok4pMxZw/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[#CC2224] px-6 py-3 text-sm font-semibold hover:bg-[#b31d1f] transition"
           >
             Become a Space Partner

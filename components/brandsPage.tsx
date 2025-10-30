@@ -41,7 +41,9 @@ export function Hero() {
           className="mt-8 flex items-center gap-3"
         >
           <Link
-            href="/contact"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf6IqDJ3WhYjUc-805XiHlsZ_D4lomL9_qCPKl7EIHlfDubBA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[#CC2224] px-6 py-3 text-sm font-semibold hover:bg-[#b31d1f] transition"
           >
             Become a Brand Partner
@@ -251,7 +253,9 @@ export function FinalCTA() {
 
         <div className="mt-8">
           <Link
-            href="/contact"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf6IqDJ3WhYjUc-805XiHlsZ_D4lomL9_qCPKl7EIHlfDubBA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[#CC2224] px-6 py-3 text-sm font-semibold hover:bg-[#b31d1f] transition"
           >
             Apply to Partner
