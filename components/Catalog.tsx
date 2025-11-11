@@ -1,17 +1,46 @@
 "use client";
 
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useState } from "react";
+import { onValue, ref } from "firebase/database";
+import { db } from "@/firebase";
 
-const LOCATIONS = [
-  { label: "Smartworks - Gurugram", file: "/Smartworks.pdf" },
-  { label: "Awfis - Ambience Mall, Gurugram", file: "/Awfis.pdf" },
-  { label: "The Lodhi - New delhi", file: "/Lodhi.pdf" },
-];
+type LocationDoc = {
+  id: string;
+  label: string;
+  url: string;
+  active: boolean;
+  updatedAt?: number;
+};
 
 export default function CataloguePage() {
-  const [selected, setSelected] = useState("");
-  const url = selected ? selected : "";
+  const [locations, setLocations] = useState<LocationDoc[]>([]);
+  const [selected, setSelected] = useState<string>("");
+
+  // subscribe to locations
+  useEffect(() => {
+    const r = ref(db, "catalog/locations");
+    const unsub = onValue(r, (snap) => {
+      const val = snap.val() || {};
+      const list: LocationDoc[] = Object.entries(val).map(([id, v]: any) => ({
+        id,
+        label: v.label ?? "",
+        url: v.url ?? "",
+        active: !!v.active,
+        updatedAt: v.updatedAt ?? 0,
+      }));
+      list.sort((a, b) => a.label.localeCompare(b.label));
+      setLocations(list.filter((x) => x.active && x.url));
+    });
+    return () => unsub();
+  }, []);
+
+  const firstUrl = useMemo(() => locations[0]?.url || "", [locations]);
+  useEffect(() => {
+    if (!selected && firstUrl) setSelected(firstUrl);
+  }, [firstUrl, selected]);
+
+  const url = selected || "";
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-20">
@@ -34,9 +63,9 @@ export default function CataloguePage() {
           className="rounded-lg bg-white/5 border border-white/10 px-5 py-3 w-64 sm:w-80 text-white text-base
                      focus:outline-none focus:ring-2 focus:ring-[#CC2224] backdrop-blur-lg"
         >
-          <option value="">— Select Location —</option>
-          {LOCATIONS.map((loc, index) => (
-            <option key={index} value={loc.file} className="text-black">
+          {locations.length === 0 && <option>Loading…</option>}
+          {locations.map((loc) => (
+            <option key={loc.id} value={loc.url} className="text-black">
               {loc.label}
             </option>
           ))}
@@ -67,13 +96,14 @@ export default function CataloguePage() {
           </div>
         )}
       </div>
-      {/* <div>
-        <Link href={"/admin-login"}>
-          <button className="px-10 py-5 mt-10 bg-white/10 rounded-2xl font-bold hover:bg-[#CC2224]/50 transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+
+      <div>
+        <Link href="/admin-login">
+          <button className="px-10 py-5 mt-10 bg-white/10 rounded-2xl font-bold hover:bg-[#CC2224]/50 transition-all duration-300 ease-out hover:scale-105">
             Admin Login
           </button>
         </Link>
-      </div> */}
+      </div>
     </main>
   );
 }
